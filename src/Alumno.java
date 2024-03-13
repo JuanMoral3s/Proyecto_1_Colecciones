@@ -4,7 +4,7 @@ public class Alumno {
 
     private long numero_cuenta;
     private String nombre;
-    private Grupo[][] horario = new Grupo[6][7];
+    private Grupo[][] horario = new Grupo[7][6];
 
     private List<Integer> materiasInscritas = new ArrayList<>();
     public static Hashtable<Long,Alumno> alumnos = new Hashtable<Long,Alumno>();
@@ -30,9 +30,7 @@ public class Alumno {
         return this.horario;
     }
 
-    public void setHorario(Grupo[][] horario) {
-        this.horario = horario;
-    }
+
 
     public void setNombres(String nombres) {
         this.nombre = nombres;
@@ -104,12 +102,12 @@ public class Alumno {
     }
 
     private void introducirHorario(int horario,int dia, Grupo grupo){
-        if (this.horario[dia][horario] == null && !(this.materiasInscritas.contains(grupo.getAsignaturaImpartida()))){
+        if (this.horario[horario][dia] == null && !(this.materiasInscritas.contains(grupo.getAsignaturaImpartida()))){
             this.materiasInscritas.add(grupo.getAsignaturaImpartida());
             grupo.alumnoInscrito();
             this.setHorario(horario,dia,grupo);
             System.out.println("Horario actualizado exitosamente!");
-            imprimirHorario(this.horario,grupo);
+            imprimirHorarioActualizado(this.horario,grupo);
         }
         else{
             System.out.println("Ya tienes materias inscritas en este horario o ya cuentas con gurpo de esta materia");
@@ -149,7 +147,7 @@ public class Alumno {
 
     }
 
-    public static void imprimirHorario(Grupo[][] horario,Grupo grupo) {
+    public static void imprimirHorarioActualizado(Grupo[][] horario,Grupo grupo) {
         for (int i = 0; i < horario.length; i++) {
             for (int k = 0; k < horario[i].length; k++) {
                 if (horario[i][k] == null){
@@ -157,6 +155,20 @@ public class Alumno {
                 }
                 else {
                     System.out.printf("%15s", Asignatura.asignaturaPorClave(horario[i][k].getAsignaturaImpartida()) + " Grupo: " + grupo.getNumeroDeGrupo());
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void imprimirHorario(Grupo[][] horario) {
+        for (int i = 0; i < horario.length; i++) {
+            for (int k = 0; k < horario[i].length; k++) {
+                if (horario[i][k] == null){
+                    System.out.printf("%15s" , "  ---  ");
+                }
+                else {
+                    System.out.printf("%15s", Asignatura.asignaturaPorClave(horario[i][k].getAsignaturaImpartida()));
                 }
             }
             System.out.println();

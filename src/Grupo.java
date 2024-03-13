@@ -105,7 +105,7 @@ public class Grupo {
                 default -> System.out.println("Opcion invalida.");
             }
         }
-        while (eleccion_usuario != 3);
+        while (eleccion_usuario != 4);
     }
 
     private static void registrarNuevoGrupo() {
