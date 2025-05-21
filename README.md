@@ -1,5 +1,5 @@
 # Proyecto Colecciones-Sistema de inscripción
-Proyeertenece a la realizacion de un sistema de inscripción que funciona a traves de la consola haciendo uso de lists, hashmaps, hashtables entre otros tipos de contenedor de elementos en Java como parte de la materia Programación Orientada a Objetos.
+El codigo pertenece a la realizacion de un sistema de inscripción que funciona a traves de la consola haciendo uso de lists, hashmaps, hashtables entre otros tipos de contenedor de elementos en Java como parte de la materia Programación Orientada a Objetos.
 
 ## Pre-requisitos
 
