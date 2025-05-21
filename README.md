@@ -1,6 +1,10 @@
 # Proyecto Colecciones-Sistema de inscripción
 El codigo pertenece a la realizacion de un sistema de inscripción que funciona a traves de la consola haciendo uso de lists, hashmaps, hashtables entre otros tipos de contenedor de elementos en Java como parte de la materia Programación Orientada a Objetos.
 
+## Fecha de realización
+
+Febrero de 2024
+
 ## Pre-requisitos
 
 No requiere de ningun requisito extra mas que un IDE capaz de correr Java, como recomendación utilizar InteliJ IDEA ya que fue la IDE donde se realizo el codigo.
